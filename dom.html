@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Challenge</title>
+</head>
+<body>
+
+  <h1 id="title">Натисни кнопку 👇</h1>
+
+  <button id="btn">Змінити заголовок</button>
+
+  <br><br>
+
+  <img id="image" 
+       src="https://images.unsplash.com/photo-1506748686214-bd4187b2ec6c" 
+       width="300">
+
+  <script>
+  
+    document.getElementById("btn").onclick = function() {
+      document.getElementById("title").textContent = "Мій перший сайт з формами і не тільки)))!";
+    };
+    
+    document.body.onclick = function() {
+      document.body.style.background = "lightgreen";
+    };
+
+    document.getElementById("image").onclick = function(event) {
+      event.stopPropagation(); 
+      document.getElementById("image").src =
+          "https://uploads.onecompiler.io/4477er548/4477e3nhp/%D1%83%D1%81%D1%8F.jpg";
+    };
+  </script>
+
+</body>
+</html>
